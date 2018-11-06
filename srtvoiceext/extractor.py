@@ -97,23 +97,24 @@ def extract(video_name=None, subtitle_name=None, relative_outdir='voice_data', l
                 logger.info(audio_filename)
                 six.print_(line.text, flush=True)
                 playsound(audio_filepath)
-                six.print_("[{}]  [{}]  [{}]  [{}]".format("y: Keep", "n: Delete", "r: Repeat", "q: Quit"), flush=True)
-                cmd = getch()
-                if cmd in "yY":
-                    six.print_("Kept as {}".format(audio_filename))
-                    break
-                elif cmd in "nN":
-                    os.remove(audio_filepath)
-                    six.print_("Removed.")
-                    break
-                elif cmd in "rR":
-                    six.print_("------------------------------------------")
-                    continue
-                elif cmd in "qQ":
-                    os.remove(audio_filepath)
-                    six.print_("------------------------------------------")
-                    return
-                else:
-                    six.print_("Invalid input received please try again.")
+                six.print_("Kept as {}".format(audio_filename))
+                #six.print_("[{}]  [{}]  [{}]  [{}]".format("y: Keep", "n: Delete", "r: Repeat", "q: Quit"), flush=True)
+                #cmd = getch()
+                # if cmd in "yY":
+                #     six.print_("Kept as {}".format(audio_filename))
+                #     break
+                # elif cmd in "nN":
+                #     os.remove(audio_filepath)
+                #     six.print_("Removed.")
+                #     break
+                # elif cmd in "rR":
+                #     six.print_("------------------------------------------")
+                #     continue
+                # elif cmd in "qQ":
+                #     os.remove(audio_filepath)
+                #     six.print_("------------------------------------------")
+                #     return
+                # else:
+                #     six.print_("Invalid input received please try again.")
 
             six.print_("------------------------------------------")
